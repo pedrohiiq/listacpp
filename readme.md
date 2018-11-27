@@ -1,6 +1,6 @@
-| ex | status | ex | status | ex | status |
-| ---|  ---   | ---|   ---  | ---|   ---  |
-|  1 |  feito |  2 |        |  3 |        |
+| ex | status | ex | status | ex | status | ex | status | ex | status | ex | status |
+| ---|  ---   | ---|   ---  | ---|   ---  | ---|  ---   | ---|   ---  | ---|   ---  |
+|  1 |  feito |  2 |        |  3 |        |  4 |        |  5 |        |  6 |        |
 |  4 |        |  5 |        |  6 |        |
 |  7 |        |  8 |  doin' |  9 |        | 
 | 10 |        | 11 |        | 12 |        |    

@@ -1,5 +1,6 @@
-1 | feito
+ex| status
 ---|---
+1 | feito
 2 |
 3 |
 4 |

@@ -1,24 +1,31 @@
-// ConsoleApplication12.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
+#include <stdio.h>
 #include <cmath>
+#include <locale.h>
 
+int main() {
 
-int main()
-{
-	int a, b, c, r, s, d;
-	printf_s("Insira um numero inteiro:\n");
-	scanf_s("%d", &a);
-	printf_s("Insira um segundo numero inteiro:\n");
-	scanf_s("%d", &b);
-	printf_s("Insira um terceiro numero inteiro:\n");
-	scanf_s("%d", &c);
-	r = pow( (a + b), 2);
-	s = pow( (b + c), 2);
-	d = (r + s) / 2;
-	printf_s("(%d + %d)^2 + (%d + %d)^2 / 2 = %d", a, b, b, c, d);
-	
-	return 0;
+    setlocale(LC_ALL, "Portuguese");//habilita a acentuação para o português
+    int a, b, c, r, s, d;
+
+    printf("Insira um numero inteiro:\n");
+    scanf("%d", &a);
+    printf("Insira um segundo numero inteiro:\n");
+    scanf("%d", &b);
+    printf("Insira um terceiro numero inteiro:\n");
+    scanf("%d", &c);
+
+    r = pow( (a + b), 2);
+    s = pow( (b + c), 2);
+    d = (r + s) / 2;
+
+    printf("\n(%d + %d)^2 + (%d + %d)^2 / 2 = %d\n", a, b, b, c, d);
+
+    //r = (a + b) ^ 2
+    //s = (b + c) ^ 2
+    //d = (r + s) / 2 =>
+    //d = (pow(a + b, 2) + pow(b + c, 2)) / 2
+    //a expressao dada na lista.
+
+    return 0;
 }
 

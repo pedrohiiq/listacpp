@@ -1,5 +1,5 @@
 # Status atual
-###sinta-se a vontade para copiar esse arquivo :)
+### Sinta-se a vontade para copiar esse arquivo :)
 
 |  ex | status |  ex | status |  ex | status |  ex | status |  ex | status |  ex | status |
 |:---:|  :---: |:---:|  :---: |:---:|  :---: |:---:|  :---: |:---:|  :---: |:---:|  :---: |

@@ -10,7 +10,7 @@ void mostrarMatriz( int *, int, int );
 int main() {
       int linhas = 3, colunas = 3;
       int m[linhas][colunas];
-      preencherMatriz(m, linhas, colunas);
+      preencherMatriz(*m, linhas, colunas);
 	return 0;
 }
 
@@ -42,7 +42,7 @@ void preencherMatriz( int *m, int L, int C ) {
 void mostrarMatriz( int *m, int L, int C ) {
       for (int i = 0; i < L; i++) {
             for (int j = 0; j < L; j++) {
-                  printf("%d", m[i][j]);
+                  printf("%d", m[calcularIndex(i, j, C)]);
                   if (i != C -1) {
                         printf(", ");
                   } else {

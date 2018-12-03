@@ -10,6 +10,7 @@ struct matriz {
 void matrizInit( matriz *, int*, int, int );
 int pegarInt( char * );
 int calcularIndex( int, int, int );
+void mudarMat( matriz *, int, int, int );
 void preencherMatriz( matriz * );
 void mostrarMatriz( matriz );
 bool eMatrizQuadrada( matriz );
@@ -24,8 +25,8 @@ int main() {
       matrizInit( &m1, *m, l, c );
       preencherMatriz( &m1 );
       printf("matriz dada\n");
-      mostrarmatriz( m1 );
-      if (eMatrizQuadrada( matriz ) {      
+      mostrarMatriz( m1 );
+      if (eMatrizQuadrada( m1 )) {      
             printf("matriz transposta\n");
             mostrarMatrizTransposta( m1 );
       } else {
@@ -80,16 +81,26 @@ void matrizInit( matriz *container, int *m, int L, int C ) {
       container -> m = m;
 }
 
-bool eMatrizQuadrada( matriz ) {
-      return (matriz.l == matriz.c);
+bool eMatrizQuadrada( matriz container ) {
+      return (container.l == container.c);
 }
 
-void mostrarMatrizTransposta( matriz ) {
-      for (i = 0; i < matriz.l; i++) {
-            for (j = 0; j < matriz.c; j++) {
-                  printf("%3d", matriz.m[calcularIndex(j, i, matriz.c)]);
+void mostrarMatrizTransposta( matriz container ) {
+      printf("\n");
+	  for (int i = 0; i < container.l; i++) {
+            for (int j = 0; j < container.c; j++) {
+                  printf("%3d", container.m[calcularIndex(j, i, container.c)]);
+                  if (j != container.c -1) {
+                        printf(", ");
+                  } else {
+                        printf("\n");
+                  }
             }
       }
+}
+
+void mudarMat( matriz * container, int l, int c, int n ) {
+      container -> m[calcularIndex(l, c, container -> c)] = n;
 }
 
 //--i -> pre decremento (reduz o valor antes, retorna depois).

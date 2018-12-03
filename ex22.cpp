@@ -12,21 +12,25 @@ int pegarInt( char * );
 int calcularIndex( int, int, int );
 void preencherMatriz( matriz * );
 void mostrarMatriz( matriz );
+bool eMatrizQuadrada( matriz );
 void mostrarMatrizTransposta( matriz );
 
 int main() {
-      char msg1[] = "Quantas linhas tera a matriz\n";
-      char msg2[] = "Quantas colunas tera a matriz\n";
+      char msg1[] = "Quantas linhas e colunas tera a matriz\n";
       int l = pegarInt(msg1);
-      int c = pegarInt(msg2);
+      int c = l;
       int m[l][c];
       matriz m1;
       matrizInit( &m1, *m, l, c );
       preencherMatriz( &m1 );
       printf("matriz dada\n");
       mostrarmatriz( m1 );
-      printf("matriz transposta\n");
-      mostrarMatrizTransposta( m1 );
+      if (eMatrizQuadrada( matriz ) {      
+            printf("matriz transposta\n");
+            mostrarMatrizTransposta( m1 );
+      } else {
+	    printf("a matriz tem que ser quadrada!");
+      }
       return 0;
 }
 
@@ -76,6 +80,9 @@ void matrizInit( matriz *container, int *m, int L, int C ) {
       container -> m = m;
 }
 
+bool eMatrizQuadrada( matriz ) {
+      return (matriz.l == matriz.c);
+}
 
 void mostrarMatrizTransposta( matriz ) {
       for (i = 0; i < matriz.l; i++) {

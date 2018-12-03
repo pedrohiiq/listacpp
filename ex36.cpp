@@ -6,8 +6,12 @@ void printTabuada( int );
 
 int main() {
 	int n;
-	setInt( &n );
-	printTabuada( n );
+	for (int i = 0; i < 20; i++) {
+		setInt( &n );
+		std::cout << std::endl;
+		printTabuada( n );
+		std::cout << std::endl;
+	}
 }
 
 int pegarInt() {
